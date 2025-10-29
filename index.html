@@ -13,11 +13,10 @@
     </style>
   </head>
   <body>
-    <
     <script>
       function a(){
-      if(!(localStorage.getItem("x")===1)){
-        localStorage.setItem("x",1);
+      if(!(localStorage.getItem("x")==="1")){
+        localStorage.setItem("x","1");
         a();
       } else{
       fetch("https://ilerideGelecekInsallah" , 
