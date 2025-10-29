@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Sayaç
+    </title>
+    <style>
+      body{
+        background-color: black;
+        color: white;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <
+    <script>
+      function a(){
+      if(!(localStorage.getItem("x")===1)){
+        localStorage.setItem("x",1);
+        a();
+      } else{
+      fetch("https://ilerideGelecekInsallah" , 
+            {
+              method: "POST",
+              headers: {"Content-Type": "application/json"},
+              body: JSON.stringify({deger: 1})
+            }
+           ).then(r=>r.json())
+      .then(r=>alert(r))
+        .catch(function(e){alert(e);});
+      };
+      } 
+      a();
+    </script>
+  </body>
+</html>
